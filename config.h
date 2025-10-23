@@ -10,8 +10,8 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "CaskaydiaCove Nerd Font Mono:style:Bold:size=27:antialias=true:autohint=true" };
-static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:style:Bold:size=27";
+static const char *fonts[]          = { "CaskaydiaCove Nerd Font Mono:style:Bold:size=20:antialias=true:autohint=true" };
+static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:style:Bold:size=20";
 
 /* Catppuccin Macchiato core */
 static const char col_black[]     = "#000000";
