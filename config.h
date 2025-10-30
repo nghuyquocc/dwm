@@ -122,6 +122,9 @@ static const Key keys[] = {
     /* lock and suspend */
     { MODKEY|ControlMask,           XK_l,      spawn,          SHCMD("~/.local/bin/slock") },
 
+    /* power off */
+    { MODKEY|ControlMask,           XK_o,      spawn,          SHCMD("systemctl poweroff") },
+
     /* volume */
     { 0, XF86XK_AudioRaiseVolume,              spawn,          {.v = volupcmd } },
     { 0, XF86XK_AudioLowerVolume,              spawn,          {.v = voldowncmd } },
