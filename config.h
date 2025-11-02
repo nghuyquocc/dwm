@@ -13,22 +13,22 @@ static const int topbar             =  1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "CaskaydiaCove Nerd Font Mono:style:Bold:size=20:antialias=true:autohint=true" };
 static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:style:Bold:size=20";
 
-static const char col_black[]     = "#000000";
-static const char col_base[]      = "#24273a"; /* dark bar/background */
-static const char col_mantle[]    = "#1e2030"; /* dark text on accent */
-static const char col_surface1[]  = "#363a4f"; /* subtle borders */
-static const char col_text[]      = "#cad3f5"; /* normal text */
-static const char col_lavender[]  = "#b7bdf8"; /* accent for selected tag and focused border */
+static const char col_black[]       = "#000000";
+static const char col_base[]        = "#24273a"; /* dark bar/background */
+static const char col_mantle[]      = "#1e2030"; /* dark text on accent */
+static const char col_surface1[]    = "#363a4f"; /* subtle borders */
+static const char col_text[]        = "#cad3f5"; /* normal text */
+static const char col_lavender[]    = "#b7bdf8"; /* accent for selected tag and focused border */
 
 static const char *colors[][3] = {
-    [SchemeNorm]     = { col_text,  col_black, col_black },
-    [SchemeSel]      = { col_text,  col_black, col_black },
+    [SchemeNorm]                    = { col_text,  col_black, col_black },
+    [SchemeSel]                     = { col_text,  col_black, col_black },
 
-    [SchemeStatus]   = { col_text,  col_black, col_black },
-    [SchemeTagsNorm] = { col_text,  col_black, col_black },
-    [SchemeTagsSel]  = { col_lavender, col_black, col_black },
-    [SchemeInfoNorm] = { col_text,  col_black, col_black },
-    [SchemeInfoSel]  = { col_text,  col_black, col_black },
+    [SchemeStatus]                  = { col_text,  col_black, col_black },
+    [SchemeTagsNorm]                = { col_text,  col_black, col_black },
+    [SchemeTagsSel]                 = { col_lavender, col_black, col_black },
+    [SchemeInfoNorm]                = { col_text,  col_black, col_black },
+    [SchemeInfoSel]                 = { col_text,  col_black, col_black },
 };
 
 /* tagging */
@@ -45,11 +45,11 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const float mfact        = 0.5; /* factor of master area size [0.05..0.95] */
-static const int nmaster        = 1;    /* number of clients in master area */
-static const int resizehints    = 1;    /* 1 means respect size hints in tiled resizals */
-static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
-static const int refreshrate    = 120;  /* refresh rate (per second) for client move/resize */
+static const float mfact            = 0.5; /* factor of master area size [0.05..0.95] */
+static const int nmaster            = 1;    /* number of clients in master area */
+static const int resizehints        = 1;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen     = 1; /* 1 will force focus on the fullscreen window */
+static const int refreshrate        = 120;  /* refresh rate (per second) for client move/resize */
 
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
@@ -91,6 +91,8 @@ static const char *volupcmd[]   = { "sh", "-c", "~/.local/bin/volstep up", NULL 
 static const char *voldowncmd[] = { "sh", "-c", "~/.local/bin/volstep down", NULL };
 static const char *mutecmd[]    = { "sh", "-c", "~/.local/bin/volstep toggle", NULL };
 
+static const char *toggle_kbd[] = { "sh", "-c", "~/.local/bin/togglekbd", NULL };
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
@@ -124,6 +126,9 @@ static const Key keys[] = {
 
     /* power off */
     { MODKEY|ControlMask,           XK_o,      spawn,          SHCMD("systemctl poweroff") },
+
+    /* toggle keyboard layout */
+    { ControlMask|ShiftMask,        XK_space,  spawn,          {.v = toggle_kbd } },
 
     /* volume */
     { 0, XF86XK_AudioRaiseVolume,              spawn,          {.v = volupcmd } },
