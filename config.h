@@ -10,8 +10,8 @@ static const unsigned int gappov    = 30;       /* vert outer gap between window
 static       int smartgaps          =  0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            =  1;        /* 0 means no bar */
 static const int topbar             =  1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "CaskaydiaCove Nerd Font Mono:style:Bold:size=20:antialias=true:autohint=true" };
-static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:style:Bold:size=20";
+static const char *fonts[]          = { "CaskaydiaCove Nerd Font Mono:style:Bold:size=10:antialias=true:autohint=true" };
+static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:style:Bold:size=10";
 
 static const char col_black[]       = "#000000";
 static const char col_base[]        = "#24273a"; /* dark bar/background */
@@ -23,7 +23,6 @@ static const char col_lavender[]    = "#b7bdf8"; /* accent for selected tag and 
 static const char *colors[][3] = {
     [SchemeNorm]                    = { col_text,  col_black, col_black },
     [SchemeSel]                     = { col_text,  col_black, col_black },
-
     [SchemeStatus]                  = { col_text,  col_black, col_black },
     [SchemeTagsNorm]                = { col_text,  col_black, col_black },
     [SchemeTagsSel]                 = { col_lavender, col_black, col_black },
@@ -97,6 +96,7 @@ static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
+    { MODKEY,                       XK_s,      zoom,           {0} },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
