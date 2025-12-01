@@ -2,16 +2,16 @@
 
 /* appearance */
 static const unsigned int borderpx  =  2;        /* border pixel of windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const unsigned int gappih    = 20;       /* horiz inner gap between windows */
-static const unsigned int gappiv    = 20;       /* vert inner gap between windows */
-static const unsigned int gappoh    = 30;       /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov    = 30;       /* vert outer gap between windows and screen edge */
+static const unsigned int snap      = 36;       /* snap pixel */
+static const unsigned int gappih    = 18;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 18;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 27;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 27;       /* vert outer gap between windows and screen edge */
 static       int smartgaps          =  0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            =  1;        /* 0 means no bar */
 static const int topbar             =  1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "CaskaydiaCove Nerd Font Mono:style:Bold:size=10:antialias=true:autohint=true" };
-static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:style:Bold:size=10";
+static const char *fonts[]          = { "CaskaydiaCove Nerd Font Mono:style:Bold:size=20:antialias=true:autohint=true" };
+static const char dmenufont[]       = "CaskaydiaCove Nerd Font Mono:style:Bold:size=20";
 
 static const char col_black[]       = "#000000";
 static const char col_base[]        = "#24273a"; /* dark bar/background */
